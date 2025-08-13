@@ -244,53 +244,51 @@
         margin: 24px 0;
       }
 
-      @media print {
-        /* Configuración de página */
-        @page {
-          size: A4;
-          margin: 0.5cm;
-        }
+    @media print {
+  /* Tamaño de hoja y márgenes del navegador */
+  @page {
+    size: A4;
+    margin: 0.5cm;
+  }
 
-        /* Fondo y limpieza */
-        body {
-          background: white;
-          zoom: 0.85; /* Ajusta este valor si no cabe */
-          font-size: 12px;
-          line-height: 1.3;
-        }
+  html, body { height: auto; }
+  body { background: #fff !important; }
 
-        .layout {
-          margin: 0;
-        }
-        .cv {
-          box-shadow: none;
-          border: none;
-        }
+  /* Compactar el contenedor y escalar para que quepa en 1 página */
+  .layout { margin: 0; padding: 0; }
+  .cv {
+    box-shadow: none; border: none;
+    padding: 8mm 6mm;                /* menos padding en impresión */
+    transform: scale(0.88);          /* <-- ajusta este valor si aún ocupa 2 páginas */
+    transform-origin: top left;
+    width: calc(100% / 0.88);        /* compensa el scale para no cortar el borde derecho */
+  }
 
-        /* Quitar estilos de enlaces */
-        a {
-          color: inherit;
-          text-decoration: none;
-          border: 0;
-        }
+  /* Tipografías y espacios más compactos */
+  body { font-size: 12px; line-height: 1.3; }
+  .cv__header { gap: 6px; margin-bottom: 8px; padding-bottom: 8px; }
+  .cv__name { font-size: 22px; margin: 0; }
+  .cv__role { font-size: 14px; }
+  .cv__section-title { margin: 12px 0 4px; font-size: 11px; letter-spacing: 0.08em; }
 
-        .job__title a {
-          display: none;
-        }
+  .job { padding: 4px 0; }
+  .job__title { font-size: 14px; margin: 0 0 2px 0; }
+  .job__meta { font-size: 11px; margin-bottom: 4px; }
+  .job__task { margin: 4px 0; padding-left: 20px; }
+  .job__task::before { top: 0.45em; width: 10px; height: 10px; }
 
-        /* Evitar cortes raros */
-        .section-title,
-        .job,
-        .tasks,
-        .two-col {
-          page-break-inside: avoid;
-        }
+  .skills__item { padding: 6px 8px; margin-bottom: 6px; }
 
-        /* Quitar URLs después de los enlaces */
-        a[href]:after {
-          content: "";
-        }
-      }
+  /* Quitar elementos que consumen espacio en papel */
+  .chips, .sep { display: none !important; }
+  .cv__links svg { display: none; }
+
+  /* Limpiar enlaces y evitar cortes feos */
+  a { color: inherit; text-decoration: none; border: 0; }
+  a[href]::after { content: ""; }
+  .job, .skills, .cv__grid { break-inside: avoid; page-break-inside: avoid; }
+}
+
     </style>
   </head>
   <body>
