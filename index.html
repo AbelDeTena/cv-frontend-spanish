@@ -31,29 +31,46 @@
       }
 
       /* Base */
-      * { box-sizing: border-box; }
-      html, body { height: 100%; }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
       body {
         margin: 0;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
-        background:
-          var(--border),
-          radial-gradient(900px 600px at 110% 10%, rgba(42, 195, 222, 0.14), transparent 60%),
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        background: var(--border),
+          radial-gradient(
+            900px 600px at 110% 10%,
+            rgba(42, 195, 222, 0.14),
+            transparent 60%
+          ),
           var(--bg);
         color: var(--ink);
         line-height: 1.5;
       }
-      strong { color: var(--brand-dark); font-weight: 700; }
+      strong {
+        color: var(--brand-dark);
+        font-weight: 700;
+      }
 
       /* Layout contenedor */
-      .layout { max-width: 980px; margin: 48px auto; padding: 0 20px; }
+      .layout {
+        max-width: 980px;
+        margin: 48px auto;
+        padding: 0 20px;
+      }
 
       /* Bloque CV */
       .cv {
         background: var(--card);
         border: 1px solid var(--border);
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         padding: 28px;
       }
       .cv__header {
@@ -103,9 +120,19 @@
         align-items: center;
         gap: 6px;
       }
-      .link:hover { color: var(--brand); border-color: var(--brand); }
-      .link--lemon { color: #66a304; font-weight: 600; border-bottom: none; }
-      .link--lemon:hover { color: #bef264; text-decoration: underline; }
+      .link:hover {
+        color: var(--brand);
+        border-color: var(--brand);
+      }
+      .link--lemon {
+        color: #66a304;
+        font-weight: 600;
+        border-bottom: none;
+      }
+      .link--lemon:hover {
+        color: #bef264;
+        text-decoration: underline;
+      }
 
       .cv__section-title {
         margin: 26px 0 12px 0;
@@ -120,29 +147,60 @@
         grid-template-columns: 1fr 2fr;
         gap: 18px;
       }
-      @media (max-width: 760px) { .cv__grid { grid-template-columns: 1fr; } }
+      @media (max-width: 760px) {
+        .cv__grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
       /* Bloque job */
-      .job { padding: 7px 0; }
-      .job__title { margin: 0 0 4px 0; font-size: 18px; }
-      .job__title--brand { color: var(--brand); }
-      .job__company { margin: 0; }
-      .job__meta { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+      .job {
+        padding: 7px 0;
+      }
+      .job__title {
+        margin: 0 0 4px 0;
+        font-size: 18px;
+      }
+      .job__title--brand {
+        color: var(--brand);
+      }
+      .job__company {
+        margin: 0;
+      }
+      .job__meta {
+        color: var(--muted);
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
 
-      .job__tasks { list-style: none; padding: 0; margin: 8px 0 0 0; }
-      .job__task { position: relative; padding-left: 28px; margin: 8px 0; }
+      .job__tasks {
+        list-style: none;
+        padding: 0;
+        margin: 8px 0 0 0;
+      }
+      .job__task {
+        position: relative;
+        padding-left: 28px;
+        margin: 8px 0;
+      }
       .job__task::before {
         content: "";
         position: absolute;
-        left: 0; top: 0.6em;
-        width: 12px; height: 12px;
+        left: 0;
+        top: 0.6em;
+        width: 12px;
+        height: 12px;
         background: var(--brand);
-        -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M20.285 6.709a1 1 0 0 0-1.414-1.418l-9.192 9.21-4.243-4.244a1 1 0 0 0-1.414 1.414l5 5a1 1 0 0 0 1.414 0l10-10z"/></svg>') no-repeat center;
-                mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M20.285 6.709a1 1 0 0 0-1.414-1.418l-9.192 9.21-4.243-4.244a1 1 0 0 0-1.414 1.414l5 5a1 1 0 0 0 1.414 0l10-10z"/></svg>') no-repeat center;
+        -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M20.285 6.709a1 1 0 0 0-1.414-1.418l-9.192 9.21-4.243-4.244a1 1 0 0 0-1.414 1.414l5 5a1 1 0 0 0 1.414 0l10-10z"/></svg>')
+          no-repeat center;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M20.285 6.709a1 1 0 0 0-1.414-1.418l-9.192 9.21-4.243-4.244a1 1 0 0 0-1.414 1.414l5 5a1 1 0 0 0 1.414 0l10-10z"/></svg>')
+          no-repeat center;
       }
 
       /* Bloque chips + badge */
-      .chips { margin-top: 10px; }
+      .chips {
+        margin-top: 10px;
+      }
       .chips__badge,
       .badge {
         display: inline-block;
@@ -158,7 +216,11 @@
       }
 
       /* Bloque skills */
-      .skills { list-style: none; padding: 0; margin: 0; }
+      .skills {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
       .skills__item {
         margin-bottom: 8px;
         background: var(--chip);
@@ -183,11 +245,51 @@
       }
 
       @media print {
-        body { background: white; }
-        .layout { margin: 0; }
-        .cv { box-shadow: none; border: none; }
-        a { color: inherit; text-decoration: none; border: 0; }
-        .job__title a { display: none; }
+        /* Configuración de página */
+        @page {
+          size: A4;
+          margin: 0.5cm;
+        }
+
+        /* Fondo y limpieza */
+        body {
+          background: white;
+          zoom: 0.85; /* Ajusta este valor si no cabe */
+          font-size: 12px;
+          line-height: 1.3;
+        }
+
+        .layout {
+          margin: 0;
+        }
+        .cv {
+          box-shadow: none;
+          border: none;
+        }
+
+        /* Quitar estilos de enlaces */
+        a {
+          color: inherit;
+          text-decoration: none;
+          border: 0;
+        }
+
+        .job__title a {
+          display: none;
+        }
+
+        /* Evitar cortes raros */
+        .section-title,
+        .job,
+        .tasks,
+        .two-col {
+          page-break-inside: avoid;
+        }
+
+        /* Quitar URLs después de los enlaces */
+        a[href]:after {
+          content: "";
+        }
       }
     </style>
   </head>
@@ -201,7 +303,13 @@
 
             <div class="cv__links">
               <a class="link" href="mailto:abeldetena@gmail.com">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
                   <path d="M4 6h16v12H4z" stroke="currentColor" />
                   <path d="m4 6 8 7 8-7" stroke="currentColor" />
                 </svg>
@@ -209,22 +317,59 @@
               </a>
 
               <a class="link" href="tel:+34647547341">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M6.5 3.5 9 6c.3.3.3.8 0 1.1L7.6 8.5a2 2 0 0 0-.3 2.1 16 16 0 0 0 6.1 6.1 2 2 0 0 0 2.1-.3L17 13c.3-.3.8-.3 1.1 0l2.5 2.5a1.5 1.5 0 0 1 0 2.1l-1.1 1.1c-.7.7-1.7 1-2.6.7-3.2-1-6.2-3-9-6S3.3 8.2 2.3 5c-.3-.9 0-1.9.7-2.6L4.1 1.3a1.5 1.5 0 0 1 2.1 0Z" stroke="currentColor" />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6.5 3.5 9 6c.3.3.3.8 0 1.1L7.6 8.5a2 2 0 0 0-.3 2.1 16 16 0 0 0 6.1 6.1 2 2 0 0 0 2.1-.3L17 13c.3-.3.8-.3 1.1 0l2.5 2.5a1.5 1.5 0 0 1 0 2.1l-1.1 1.1c-.7.7-1.7 1-2.6.7-3.2-1-6.2-3-9-6S3.3 8.2 2.3 5c-.3-.9 0-1.9.7-2.6L4.1 1.3a1.5 1.5 0 0 1 2.1 0Z"
+                    stroke="currentColor"
+                  />
                 </svg>
                 +34 647 547 341
               </a>
 
-              <a class="link" href="https://www.linkedin.com/in/abeldetena/" target="_blank" rel="noopener">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M4 3h4v18H4zM9 10h4v11H9zM14 7h4v14h-4z" stroke="currentColor" />
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/abeldetena/"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 3h4v18H4zM9 10h4v11H9zM14 7h4v14h-4z"
+                    stroke="currentColor"
+                  />
                 </svg>
                 LinkedIn
               </a>
 
-              <a class="link" href="https://github.com/AbelDeTena" target="_blank" rel="noopener">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.13-3.2.69-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.11-.75.41-1.26.74-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.2-3.12-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.19a11.06 11.06 0 0 1 5.8 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.57.23 2.73.11 3.02.75.82 1.2 1.86 1.2 3.12 0 4.42-2.69 5.39-5.25 5.68.42.37.8 1.1.8 2.23 0 1.61-.01 2.9-.01 3.29 0 .3.21.66.8.55C20.71 21.4 24 17.09 24 12c0-6.35-5.15-11.5-11.5-11.5z" fill="currentColor" />
+              <a
+                class="link"
+                href="https://github.com/AbelDeTena"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.13-3.2.69-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.96.11-.75.41-1.26.74-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.2-3.12-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.18 1.19a11.06 11.06 0 0 1 5.8 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.57.23 2.73.11 3.02.75.82 1.2 1.86 1.2 3.12 0 4.42-2.69 5.39-5.25 5.68.42.37.8 1.1.8 2.23 0 1.61-.01 2.9-.01 3.29 0 .3.21.66.8.55C20.71 21.4 24 17.09 24 12c0-6.35-5.15-11.5-11.5-11.5z"
+                    fill="currentColor"
+                  />
                 </svg>
                 Github
               </a>
@@ -237,13 +382,18 @@
             Desarrollador Frontend con experiencia en <strong>Vue.js</strong>,
             <strong>React</strong>, <strong>Angular</strong> y
             <strong>TypeScript</strong>, especializado en crear interfaces
-            accesibles, rápidas y optimizadas. Experiencia colaborando estrechamente con equipos de
-            <strong>diseño UX/UI</strong> para transformar prototipos en productos reales, e integrando soluciones
-            con <strong>APIs REST</strong> y <strong>GraphQL</strong> desarrolladas por backend. Con solidez en
+            accesibles, rápidas y optimizadas. Experiencia colaborando
+            estrechamente con equipos de <strong>diseño UX/UI</strong> para
+            transformar prototipos en productos reales, e integrando soluciones
+            con <strong>APIs REST</strong> y
+            <strong>GraphQL</strong> desarrolladas por backend. Con solidez en
             <strong>testing automatizado</strong> (Vitest, Playwright, Jest) y
-            <strong>arquitecturas escalables</strong> (hexagonal, componentes reutilizables). Trabajo habitual con control de versiones
-            (<strong>Git</strong>, <strong>GitLab</strong>, <strong>GitHub</strong>), metodologías ágiles y CI/CD. Actualmente
-            amplío conocimientos de <strong>Node.js</strong>, <strong>MongoDB</strong> y <strong>SQL Server</strong> para aportar
+            <strong>arquitecturas escalables</strong> (hexagonal, componentes
+            reutilizables). Trabajo habitual con control de versiones
+            (<strong>Git</strong>, <strong>GitLab</strong>,
+            <strong>GitHub</strong>), metodologías ágiles y CI/CD. Actualmente
+            amplío conocimientos de <strong>Node.js</strong>,
+            <strong>MongoDB</strong> y <strong>SQL Server</strong> para aportar
             visión full-stack.
           </p>
         </section>
@@ -260,15 +410,36 @@
             </div>
             <div>
               <ul class="job__tasks">
-                <li class="job__task">Desarrollo de nuevas funcionalidades y mantenimiento de aplicaciones web con <strong>Vue.js</strong> y <strong>TypeScript</strong>.</li>
-                <li class="job__task">Integración con <strong>APIs GraphQL</strong> y optimización de consultas con <strong>TanStack Query</strong>.</li>
-                <li class="job__task">Testing automatizado con <strong>Vitest</strong> y <strong>Playwright</strong>.</li>
-                <li class="job__task">Colaboración con <strong>diseño UX/UI</strong> y backend para integración óptima.</li>
-                <li class="job__task">Refactor y optimización para mejorar rendimiento y accesibilidad (WCAG).</li>
+                <li class="job__task">
+                  Desarrollo de nuevas funcionalidades y mantenimiento de
+                  aplicaciones web con <strong>Vue.js</strong> y
+                  <strong>TypeScript</strong>.
+                </li>
+                <li class="job__task">
+                  Integración con <strong>APIs GraphQL</strong> y optimización
+                  de consultas con <strong>TanStack Query</strong>.
+                </li>
+                <li class="job__task">
+                  Testing automatizado con <strong>Vitest</strong> y
+                  <strong>Playwright</strong>.
+                </li>
+                <li class="job__task">
+                  Colaboración con <strong>diseño UX/UI</strong> y backend para
+                  integración óptima.
+                </li>
+                <li class="job__task">
+                  Refactor y optimización para mejorar rendimiento y
+                  accesibilidad (WCAG).
+                </li>
               </ul>
               <div class="chips">
-                <span class="chips__badge">Vue.js</span><span class="chips__badge">TypeScript</span><span class="chips__badge">GraphQL</span>
-                <span class="chips__badge">TanStack Query</span><span class="chips__badge">Vitest</span><span class="chips__badge">Playwright</span><span class="chips__badge">GitLab</span>
+                <span class="chips__badge">Vue.js</span
+                ><span class="chips__badge">TypeScript</span
+                ><span class="chips__badge">GraphQL</span>
+                <span class="chips__badge">TanStack Query</span
+                ><span class="chips__badge">Vitest</span
+                ><span class="chips__badge">Playwright</span
+                ><span class="chips__badge">GitLab</span>
               </div>
             </div>
           </div>
@@ -276,18 +447,36 @@
 
           <div class="job cv__grid">
             <div>
-              <h3 class="job__title job__title--brand">Junior Frontend Developer</h3>
+              <h3 class="job__title job__title--brand">
+                Junior Frontend Developer
+              </h3>
               <h4 class="job__company">Mongo Modeler</h4>
               <div class="job__meta">Dic 2023 – Mar 2024</div>
             </div>
             <div>
               <ul class="job__tasks">
-                <li class="job__task">Desarrollo de un editor visual interactivo para modelar bases de datos documentales.</li>
-                <li class="job__task">Creación de componentes reutilizables con <strong>React</strong>, <strong>TypeScript</strong> y <strong>Vite</strong>, incluyendo representaciones gráficas con <strong>SVG</strong>.</li>
-                <li class="job__task">Implementación de pruebas unitarias con <strong>Vitest</strong> para asegurar calidad y prevenir regresiones.</li>
+                <li class="job__task">
+                  Desarrollo de un editor visual interactivo para modelar bases
+                  de datos documentales.
+                </li>
+                <li class="job__task">
+                  Creación de componentes reutilizables con
+                  <strong>React</strong>, <strong>TypeScript</strong> y
+                  <strong>Vite</strong>, incluyendo representaciones gráficas
+                  con <strong>SVG</strong>.
+                </li>
+                <li class="job__task">
+                  Implementación de pruebas unitarias con
+                  <strong>Vitest</strong> para asegurar calidad y prevenir
+                  regresiones.
+                </li>
               </ul>
               <div class="chips">
-                <span class="chips__badge">React</span><span class="chips__badge">TypeScript</span><span class="chips__badge">Vite</span><span class="chips__badge">SVG</span><span class="chips__badge">Vitest</span>
+                <span class="chips__badge">React</span
+                ><span class="chips__badge">TypeScript</span
+                ><span class="chips__badge">Vite</span
+                ><span class="chips__badge">SVG</span
+                ><span class="chips__badge">Vitest</span>
               </div>
             </div>
           </div>
@@ -295,17 +484,32 @@
 
           <div class="job cv__grid">
             <div>
-              <h3 class="job__title job__title--brand">Colaborador Frontend Developer</h3>
+              <h3 class="job__title job__title--brand">
+                Colaborador Frontend Developer
+              </h3>
               <h4 class="job__company">Manfred</h4>
               <div class="job__meta">Oct 2023 – Mar 2024</div>
             </div>
             <div>
               <ul class="job__tasks">
-                <li class="job__task">Desarrollo de herramienta web para convertir <strong>JSON MAC</strong> a <strong>MS Word</strong>, <strong>Markdown</strong> y <strong>HTML</strong>.</li>
-                <li class="job__task">Implementación de interfaz y lógica con <strong>React</strong>, <strong>TypeScript</strong>, <strong>Vite</strong> y <strong>Emotion (CSS-in-JS)</strong>, gestionada con <strong>Turbo Repo</strong>.</li>
+                <li class="job__task">
+                  Desarrollo de herramienta web para convertir
+                  <strong>JSON MAC</strong> a <strong>MS Word</strong>,
+                  <strong>Markdown</strong> y <strong>HTML</strong>.
+                </li>
+                <li class="job__task">
+                  Implementación de interfaz y lógica con
+                  <strong>React</strong>, <strong>TypeScript</strong>,
+                  <strong>Vite</strong> y <strong>Emotion (CSS-in-JS)</strong>,
+                  gestionada con <strong>Turbo Repo</strong>.
+                </li>
               </ul>
               <div class="chips">
-                <span class="chips__badge">React</span><span class="chips__badge">TypeScript</span><span class="chips__badge">Vite</span><span class="chips__badge">Emotion</span><span class="chips__badge">Turbo Repo</span>
+                <span class="chips__badge">React</span
+                ><span class="chips__badge">TypeScript</span
+                ><span class="chips__badge">Vite</span
+                ><span class="chips__badge">Emotion</span
+                ><span class="chips__badge">Turbo Repo</span>
               </div>
             </div>
           </div>
@@ -316,11 +520,25 @@
           <div>
             <h2 class="cv__section-title">Competencias técnicas</h2>
             <ul class="skills">
-              <li class="skills__item"><strong>Frontend:</strong> HTML · CSS/Sass · BEM · TypeScript · Vue.js · React · Angular</li>
-              <li class="skills__item"><strong>APIs & Datos:</strong> REST · GraphQL · MongoDB · SQL Server</li>
-              <li class="skills__item"><strong>Testing & Calidad:</strong> Vitest · Playwright · Jest · TDD</li>
-              <li class="skills__item"><strong>Build & CI/CD:</strong> Vite · Webpack · GitLab CI/CD</li>
-              <li class="skills__item"><strong>Colaboración:</strong> Git · GitLab · GitHub · Jira · Confluence</li>
+              <li class="skills__item">
+                <strong>Frontend:</strong> HTML · CSS/Sass · BEM · TypeScript ·
+                Vue.js · React · Angular
+              </li>
+              <li class="skills__item">
+                <strong>APIs & Datos:</strong> REST · GraphQL · MongoDB · SQL
+                Server
+              </li>
+              <li class="skills__item">
+                <strong>Testing & Calidad:</strong> Vitest · Playwright · Jest ·
+                TDD
+              </li>
+              <li class="skills__item">
+                <strong>Build & CI/CD:</strong> Vite · Webpack · GitLab CI/CD
+              </li>
+              <li class="skills__item">
+                <strong>Colaboración:</strong> Git · GitLab · GitHub · Jira ·
+                Confluence
+              </li>
             </ul>
           </div>
 
@@ -330,38 +548,82 @@
             <div class="job">
               <h3 class="job__title">
                 Bootcamp Backend ·
-                <a class="link link--lemon" href="https://lemoncode.net/bootcamp-backend#bootcamp-backend/inicio" target="_blank" rel="noopener">Lemoncode</a>
+                <a
+                  class="link link--lemon"
+                  href="https://lemoncode.net/bootcamp-backend#bootcamp-backend/inicio"
+                  target="_blank"
+                  rel="noopener"
+                  >Lemoncode</a
+                >
               </h3>
               <div class="job__meta">Nov 2024 – Actualidad · En curso</div>
               <ul class="job__tasks">
-                <li class="job__task">Desarrollo full-stack de backends: modelado de datos, diseño e implementación de APIs (REST, GraphQL).</li>
-                <li class="job__task">Bases de datos relacionales y documentales: <strong>MongoDB</strong>, <strong>PostgreSQL</strong>, <strong>SQL Server</strong>.</li>
-                <li class="job__task">Testing, seguridad y despliegue en la nube (AWS, Azure).</li>
+                <li class="job__task">
+                  Desarrollo full-stack de backends: modelado de datos, diseño e
+                  implementación de APIs (REST, GraphQL).
+                </li>
+                <li class="job__task">
+                  Bases de datos relacionales y documentales:
+                  <strong>MongoDB</strong>, <strong>PostgreSQL</strong>,
+                  <strong>SQL Server</strong>.
+                </li>
+                <li class="job__task">
+                  Testing, seguridad y despliegue en la nube (AWS, Azure).
+                </li>
               </ul>
             </div>
 
             <div class="job">
               <h3 class="job__title">
                 Máster Frontend ·
-                <a class="link link--lemon" href="https://lemoncode.net/master-frontend#master-frontend/inicio" target="_blank" rel="noopener">Lemoncode</a>
+                <a
+                  class="link link--lemon"
+                  href="https://lemoncode.net/master-frontend#master-frontend/inicio"
+                  target="_blank"
+                  rel="noopener"
+                  >Lemoncode</a
+                >
               </h3>
               <div class="job__meta">Abr 2023 – Oct 2023</div>
               <ul class="job__tasks">
-                <li class="job__task">Interfaces responsivas y arquitecturas robustas con <strong>React</strong>, <strong>Vue</strong>, <strong>Angular</strong>, Svelte, SolidJS.</li>
-                <li class="job__task">Optimización del flujo de trabajo con bundlers como <strong>Webpack</strong> y <strong>Vite</strong>, diseño UI/UX y testing.</li>
-                <li class="job__task">Integración con backends, despliegue en nube, buenas prácticas, rendimiento y seguridad en frontend.</li>
+                <li class="job__task">
+                  Interfaces responsivas y arquitecturas robustas con
+                  <strong>React</strong>, <strong>Vue</strong>,
+                  <strong>Angular</strong>, Svelte, SolidJS.
+                </li>
+                <li class="job__task">
+                  Optimización del flujo de trabajo con bundlers como
+                  <strong>Webpack</strong> y <strong>Vite</strong>, diseño UI/UX
+                  y testing.
+                </li>
+                <li class="job__task">
+                  Integración con backends, despliegue en nube, buenas
+                  prácticas, rendimiento y seguridad en frontend.
+                </li>
               </ul>
             </div>
 
             <div class="job">
               <h3 class="job__title">
                 Bootcamp JavaScript + TypeScript ·
-                <a class="link link--lemon" href="https://lemoncode.net/bootcamp-javascript#bootcamp-javascript/inicio" target="_blank" rel="noopener">Lemoncode</a>
+                <a
+                  class="link link--lemon"
+                  href="https://lemoncode.net/bootcamp-javascript#bootcamp-javascript/inicio"
+                  target="_blank"
+                  rel="noopener"
+                  >Lemoncode</a
+                >
               </h3>
               <div class="job__meta">Nov 2022 – Mar 2023</div>
               <ul class="job__tasks">
-                <li class="job__task">Fundamentos sólidos de <strong>JavaScript</strong> y <strong>TypeScript</strong>, asincronía y patrones modernos.</li>
-                <li class="job__task">Primeros proyectos con <strong>React</strong> y prácticas de testing y desarrollo frontend.</li>
+                <li class="job__task">
+                  Fundamentos sólidos de <strong>JavaScript</strong> y
+                  <strong>TypeScript</strong>, asincronía y patrones modernos.
+                </li>
+                <li class="job__task">
+                  Primeros proyectos con <strong>React</strong> y prácticas de
+                  testing y desarrollo frontend.
+                </li>
               </ul>
             </div>
           </div>
